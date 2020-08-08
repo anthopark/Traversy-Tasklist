@@ -23,5 +23,25 @@ function addToCollection(inputTask) {
 }
 
 // Add delete functionality
+function handleRemoveTask(e){
+    console.log(e.target);
+    if (e.target.className === 'fa fa-remove'){
+        const liToDelete = e.target.parentElement.parentElement;
+        liToDelete.remove();
+    }
+}
+
+// Clear Task
+const clearTasks = document.addEventListener('click', function(e){
+    console.log(e.target); // <a class="clear-tasks btn black" href="#">
+    const deleteAll = e.target;
+    // console.log(deleteAll.classList);
+    if (deleteAll.classList.contains('clear-tasks')){
+        // console.log('worked');
+        const wholeList = document.querySelectorAll('.collection-item');
+        wholeList.remove();
+    }
+})
 
 form.addEventListener('submit', handleAddTaskSumit)
+taskCollection.addEventListener('click', handleRemoveTask);
