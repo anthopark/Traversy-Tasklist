@@ -22,5 +22,6 @@ function addToCollection(inputTask) {
     console.log(li)
 }
 
+// Add delete functionality
 
 form.addEventListener('submit', handleAddTaskSumit)
