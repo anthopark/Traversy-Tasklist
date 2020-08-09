@@ -42,6 +42,6 @@ const clearTasks = document.addEventListener('click', function(e){
         wholeList.remove();
     }
 })
-
+  
 form.addEventListener('submit', handleAddTaskSumit)
 taskCollection.addEventListener('click', handleRemoveTask);
